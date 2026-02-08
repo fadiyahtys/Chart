@@ -18,6 +18,18 @@
   />
 
   <style>
+   /* Reset body padding and margin */
+   body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Inter', sans-serif;
+   }
+
+   /* Reset default margins */
+   * {
+     box-sizing: border-box;
+   }
+
    [data-tooltip]:focus:after {
     display: none;
     border-bottom-color: none !important;
@@ -36,190 +48,154 @@
     line-height: 16px !important;
     text-align: left !important;
    }
+
+   /* Chart container styling */
+   .chart-container {
+     padding: 0 !important;
+     margin: 0;
+     background-color: #f8fafc !important;
+   }
+
+   /* Modern Navbar Styles */
+   .action-buttons {
+     margin: 0;
+     background: #1d2b5e;
+     padding: 0;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     width: 100%;
+     left: 0;
+     right: 0;
+   }
+
+   .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 20px;
+     max-width: 100%;
+   }
+
+   .navbar-brand {
+     color: white;
+     font-size: 20px;
+     font-weight: 600;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+   }
+
+   .navbar-brand img {
+     height: 40px;
+     width: auto;
+     object-fit: contain;
+   }
+
+   .navbar-menu {
+     display: flex;
+     gap: 8px;
+     align-items: center;
+   }
+
+   .navbar-divider {
+     width: 1px;
+     height: 30px;
+     background: rgba(255, 255, 255, 0.3);
+     margin: 0 15px;
+   }
+
+   .action-buttons button {
+     background: rgba(255, 255, 255, 0.2);
+     color: white;
+     border: 1px solid rgba(255, 255, 255, 0.3);
+     padding: 10px 16px;
+     border-radius: 8px;
+     font-size: 14px;
+     font-weight: 500;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     white-space: nowrap;
+     backdrop-filter: blur(10px);
+   }
+
+   .action-buttons button:hover {
+     background: rgba(255, 255, 255, 0.3);
+     border-color: rgba(255, 255, 255, 0.5);
+     transform: translateY(-2px);
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+   }
+
+   .action-buttons button:active {
+     transform: translateY(0);
+   }
+
+   /* Responsive */
+   @media (max-width: 768px) {
+     .navbar {
+       flex-direction: column;
+       gap: 15px;
+       padding: 15px 20px;
+     }
+     
+     .navbar-menu {
+       flex-wrap: wrap;
+       justify-content: center;
+     }
+     
+     .navbar-divider {
+       display: none;
+     }
+   }
   </style>
 
-  <div class="action-buttons" style="margin: 0 100px">
-   <button
-    onclick='chart.setExpanded("103").render()'
-    class="simptip-position-bottom"
-    data-tooltip='chart.setExpanded("103") &#xa; .render()'
-   >
-    Expand #103
-   </button>
-   <button
-    onclick='chart.setExpanded("103",false).render()'
-    class="simptip-position-bottom"
-    data-tooltip='chart.setExpanded("103",false) &#xa; .render()'
-   >
-    Collapse #103
-   </button>
-   <button
-    onclick='chart.addNode({id:"root child",parentId:"100",name:"test-name",position:"test-position",_centered:true})'
-    class="simptip-position-bottom"
-    data-tooltip='chart.addNode({id:"root child",parentId:"100",name:"test name",position:"test position"})'
-   >
-    Add node as roots' child
-   </button>
-   <!-- <button onclick='chart.addNode({id:"5-th level node",parentId:"O-6164",_centered:true})'
-            class="simptip-position-bottom"
-            data-tooltip='chart.addNode({id:"5-th level node",parentId:"O-6164",_centered:true})'>Insert node at 5-th
-            level</button> -->
-   <button
-    onclick='chart.removeNode("120")'
-    class="simptip-position-bottom"
-    data-tooltip='chart.removeNode("120")'
-   >
-    Remove #120
-   </button>
-   <button
-    onclick="chart.fit()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.fit()"
-   >
-    Fit
-   </button>
-   <button
-    onclick='chart.layout(["right","bottom","left","top"][index++%4]).render().fit()'
-    class="simptip-position-bottom"
-    data-tooltip='chart.layout(["right","bottom","left","top"][index++%4]) &#xa; .render() &#xa; .fit()'
-   >
-    Swap Layouts
-   </button>
-
-   <button
-    onclick='chart.setCentered("134").render()'
-    class="simptip-position-bottom"
-    data-tooltip='chart.setCentered("134") &#xa; .render()'
-   >
-    Center #134
-   </button>
-   <button
-    onclick='chart.setHighlighted("134").render()'
-    class="simptip-position-bottom"
-    data-tooltip='chart.setHighlighted("134") &#xa; .render()'
-   >
-    Highlight #134
-   </button>
-   <button
-    onclick='chart.setUpToTheRootHighlighted("134").render()'
-    class="simptip-position-bottom"
-    data-tooltip='chart.setUpToTheRootHighlighted("134") &#xa; .render()'
-   >
-    Highlight #134 to root
-   </button>
-   <button
-    onclick="chart.clearHighlighting()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.clearHighlighting() &#xa; .render()"
-   >
-    Clear highlighting
-   </button>
-   <button
-    onclick="chart.fullscreen()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.fullscreen()"
-   >
-    Full Screen
-   </button>
-   <button
-    onclick="chart.zoomIn()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.zoomIn()"
-   >
-    Zoom In
-   </button>
-   <button
-    onclick="chart.zoomOut()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.zoomOut()"
-   >
-    Zoom Out
-   </button>
-   <button
-    onclick="chart.exportImg()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.exportImg()"
-   >
-    Export Current Image
-   </button>
-   <button
-    onclick="chart.exportImg({full:true})"
-    class="simptip-position-bottom"
-    data-tooltip="chart.exportImg({full:true})"
-   >
-    Export Export Full Image
-   </button>
-   <button
-    onclick="chart.exportSvg()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.exportSvg()"
-   >
-    Export SVG
-   </button>
-   <button
-    onclick="chart.expandAll()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.expandAll()"
-   >
-    Expand All
-   </button>
-   <button
-    onclick="chart.collapseAll()"
-    class="simptip-position-bottom"
-    data-tooltip="chart.collapseAll()"
-   >
-    Collapse All
-   </button>
-   <button
-    onclick='chart.connections([{from:"145",to:"201",label:"Conflicts of interest"}]).render()'
-    class="simptip-position-bottom"
-    data-tooltip='chart.connections({from:"",to:""}) &#xa; .render()'
-   >
-    Multi Node Connections
-   </button>
-
-   <button
-    onclick="downloadPdf()"
-    class="simptip-position-bottom"
-    data-tooltip="downloadPdf()"
-   >
-    Download PDF
-   </button>
-
-   <script>
-    function downloadPdf() {
-     chart.exportImg({
-      save: false,
-      onLoad: (base64) => {
-       var pdf = new jspdf.jsPDF();
-       var img = new Image();
-       img.src = base64;
-       img.onload = function () {
-        pdf.addImage(
-         img,
-         "JPEG",
-         5,
-         5,
-         595 / 3,
-         ((img.height / img.width) * 595) / 3
-        );
-        pdf.save("chart.pdf");
-       };
-      },
-     });
-    }
-   </script>
+  <div class="action-buttons">
+   <nav class="navbar">
+     <div class="navbar-brand">
+       <img src="./src/Logo.png" alt="Leighton Asia Logo" />
+       Leighton Asia Organization Chart
+     </div>
+     
+     <div class="navbar-menu">
+       <!-- Layout Controls -->
+       <button
+        onclick='chart.layout(["right","bottom","left","top"][index++%4]).render().fit()'
+        class="simptip-position-bottom"
+        data-tooltip='chart.layout(["right","bottom","left","top"][index++%4]) &#xa; .render() &#xa; .fit()'
+       >
+        <i class="fas fa-exchange-alt"></i> Swap Layouts
+       </button>
+       <button
+        onclick="chart.expandAll()"
+        class="simptip-position-bottom"
+        data-tooltip="chart.expandAll()"
+       >
+        <i class="fas fa-expand-arrows-alt"></i> Expand All
+       </button>
+       <button
+        onclick="chart.collapseAll()"
+        class="simptip-position-bottom"
+        data-tooltip="chart.collapseAll()"
+       >
+        <i class="fas fa-compress-arrows-alt"></i> Collapse All
+       </button>
+       
+       <div class="navbar-divider"></div>
+       
+       <!-- View Control -->
+       <button
+        onclick="chart.fullscreen()"
+        class="simptip-position-bottom"
+        data-tooltip="chart.fullscreen()"
+       >
+        <i class="fas fa-expand"></i> Full Screen
+       </button>
+     </div>
+   </nav>
   </div>
 
-  <a href="https://github.com/bumbeishvili/d3-organization-chart">
-   <img
-    style="position: fixed; top: 0; right: 0; border: 0; z-index: 2"
-    width="149"
-    height="149"
-    src="https://bumbeishvili.github.io/d3-tooltip/forkme.png"
-    alt="Fork me on GitHub"
-   />
-  </a>
 
   <!----------------  ORG CHART ESSENTIAL CONTENT ---------------->
 
@@ -234,7 +210,168 @@
   <script>
    var index = 0;
    var chart;
-   d3.csv("misc/data.csv").then((dataFlattened) => {
+   
+   // Define colors for each department
+   const departmentColors = {
+    "President Director": "#2E86AB",
+    "Senior Project Control Manager": "#A23B72", 
+    "Commercial": "#F18F01",
+    "Planning": "#C73E1D",
+    "Procurement & Logistic": "#6A994E"
+   };
+   
+   // Load data from Google Sheet - Multiple approaches
+   const spreadsheetId = '2PACX-1vT_OCgq8RFU4ntnRUGq37oPZRwVSZ9hy1yUsU1mpND0Hljo91oL0G-HLi8-x1bMFZQ2pMUsK1yUpf7_';
+   let dataFlattened = [];
+
+   function loadGoogleSheetData() {
+     // Method 1: Try direct CSV fetch with proper headers
+     const csvUrl = `https://docs.google.com/spreadsheets/d/e/${spreadsheetId}/pub?output=csv`;
+     
+     fetch(csvUrl, {
+       method: 'GET',
+       mode: 'cors',
+       cache: 'no-cache'
+     })
+     .then(response => {
+       if (!response.ok) {
+         throw new Error(`HTTP ${response.status}`);
+       }
+       return response.text();
+     })
+     .then(csvText => {
+       if (!csvText || csvText.includes('<!DOCTYPE html>')) {
+         throw new Error('Invalid CSV response');
+       }
+       
+       const lines = csvText.split('\n').filter(line => line.trim());
+       if (lines.length < 2) {
+         throw new Error('No data found');
+       }
+       
+       // Skip header row and parse data
+       dataFlattened = lines.slice(1).map((line, index) => {
+         const values = line.split(',').map(v => v.trim().replace(/"/g, ''));
+         return {
+           id: values[0] || String(index + 100),
+           parentId: values[1] || '',
+           first_name: values[2] || '',
+           last_name: values[3] || '',
+           department_name: values[4] || '',
+           img_url: values[5] || ''
+         };
+       });
+       
+       console.log('Successfully loaded', dataFlattened.length, 'records from Google Sheets');
+       chart.data(dataFlattened).render();
+     })
+     .catch(error => {
+       console.warn('Direct CSV fetch failed:', error.message);
+       // Method 2: Try with a simple proxy
+       tryAlternativeMethod();
+     });
+   }
+
+   function tryAlternativeMethod() {
+     // Method 2: Use a different approach - iframe or server-side
+     console.log('Trying alternative method...');
+     
+     // For now, let's provide a manual data entry solution
+     // You can copy-paste your CSV data here
+     const csvData = `id,parentId,first_name,last_name,department_name,img_url
+100,,Simon,Burley,President Director,
+101,100,Zuraidah,Binti Mohd,Senior Project Control Manager,
+102,173,Agus,Supramono,Commercial,
+103,174,Ahnaf,Fairuz Ramadhan,Planning,
+104,173,Boby,Hendrawan Harahap,Commercial,
+105,175,Budi,Mulyanto,Procurement & Logistic,
+106,175,Dedi,Prayitno,Procurement & Logistic,
+107,174,Dimas,Sr Kuncoro,Planning,
+108,173,Donny,Isyanto,Commercial,
+109,173,Ellis,Trisnawati,Commercial,
+110,174,Ferdinand,Ariesta,Planning,
+111,174,Geoffrey,Timothy,Planning,
+112,173,Indra,Gunawan,Commercial,
+113,173,Jonathan,Julian,Commercial,
+114,173,Josh,Kevin Limanta,Commercial,
+115,173,Made,Dimas Agung Perwira,Commercial,
+116,175,Tatang,Mawardi,Procurement & Logistic,
+117,173,Wahju,Rachmat,Commercial,
+118,174,Yazid,Ubaidilah,Planning,
+119,175,Yohanes,Hermawan,Procurement & Logistic,
+120,174,Yudha,Adrianto,Planning,
+121,173,Yusaf,Tri Hartanto,Commercial,
+122,175,Yusuf,Supriyanto,Procurement & Logistic,
+123,105,Dinan,Mardiana,Procurement & Logistic,
+124,105,Fadli,Fadli,Procurement & Logistic,
+125,105,Fuad,Amirul Huda,Procurement & Logistic,
+126,105,Harry,Setiyawan,Procurement & Logistic,
+127,105,M.,Erry Bayurahardja,Procurement & Logistic,
+128,105,Sidik,Kusuma Hendra,Procurement & Logistic,
+129,105,Sukendar,Sukendar,Procurement & Logistic,
+130,107,Eliana,Festica Tandilino',Planning,
+131,107,Fajar,Restu Illahi,Planning,
+132,108,Fany,Fil Addin,Commercial,
+133,109,Ramzy,Farhan Zakaria,Commercial,
+134,109,Riska,Sari Hardiyanti,Commercial,
+135,109,Robi,Herwindo,Commercial,
+136,110,Hana,Muzainah,Planning,
+137,110,Rivaldo,Kamal,Planning,
+138,112,Nurhana,Basri,Commercial,
+139,113,Ade,Maya Kartini,Commercial,
+140,113,Antonius,Manurung,Commercial,
+141,113,Fadiyah,Nur Ayuning Tyas,Commercial,
+142,113,Hanif,Fikri Maulana,Commercial,
+143,113,Latifa,Lithasari Mutmainah,Commercial,
+144,113,M.,Endrik Irwanto,Commercial,
+145,113,Melani,Chandra Puspita,Commercial,
+146,113,RA,Imareta Sulistiofanny,Commercial,
+147,113,Rifqi,Ichwan Kurnia,Commercial,
+148,113,Teguh,Sariyadi,Commercial,
+149,115,Aang,Mochammad Iqbal,Commercial,
+150,115,Dimas,Yuniandhika,Commercial,
+151,115,Emanuel,Atyanto Widhi Nugroho,Commercial,
+152,115,Muhammad,Rizky Elyano,Commercial,
+153,115,Onivia,Nur Fitri Ardiani,Commercial,
+154,117,Puspa,Zahra,Commercial,
+155,120,Buing,Eko Prasetiyo,Planning,
+156,120,Ishaq,Maulana Akbar,Planning,
+157,140,Agus,Sriyanto,Commercial,
+158,140,Aiman,Abdul Aziz,Commercial,
+159,140,Arifa,Dwi Nabila,Commercial,
+160,140,David,Permana,Commercial,
+161,140,Karima,Nafilah,Commercial,
+162,140,Muhammad,Agi Bahrul Faiz,Commercial,
+163,140,Riki,Supriadi,Commercial,
+164,140,Satrio,Wibowo,Commercial,
+165,140,Tatok,Ariestiyantono,Commercial,
+166,140,Yohanes,Surya,Commercial,
+167,140,Yudha,Randa,Commercial,
+168,140,Yulius,Hendra Kristanto,Commercial,
+169,150,Ade,Rizki,Commercial,
+170,150,Nur,Anisa Aprilyani,Commercial,
+171,150,Tubagus,Cipta Perdana Harta,Commercial,
+172,150,Wieke,Handjari,Commercial,
+173,101,Commercial,Zuraidah Binti Mohd,Commercial,
+174,101,Planning,TBA,Planning,
+175,101,Procurement,Asep Indra,Procurement & Logistic`;
+
+     const lines = csvData.split('\n').filter(line => line.trim());
+     dataFlattened = lines.slice(1).map((line, index) => {
+       const values = line.split(',').map(v => v.trim().replace(/"/g, ''));
+       return {
+         id: values[0] || String(index + 100),
+         parentId: values[1] || '',
+         first_name: values[2] || '',
+         last_name: values[3] || '',
+         department_name: values[4] || '',
+         img_url: values[5] || ''
+       };
+     });
+     
+     console.log('Using embedded data:', dataFlattened.length, 'records');
+     chart.data(dataFlattened).render();
+   }
 
     chart = new d3.OrgChart()
      .container(".chart-container")
@@ -284,23 +421,26 @@
      //         { id: 3, from: "O-6164", to: "O-6070", label: "Possible conflicts of interest" }
      //     ],
      // )
-     //                     .nodeContent(function (d, i, arr, state) {
-
-     //                         return `
-     //                            <div style="padding:0px">
-     // <!--
-     //                             ${state.layout == 'top' && state.compact && d.flexCompactDim && (d.flexCompactDim[0] || d.flexCompactDim[0] == 1) ? ` <div style="border:1px solid black;opacity:0.5;margin-left:${-(d.flexCompactDim[0] / 2 - d.width) / 2 + state.compactMarginPair(d) / 4}px;width:${d.flexCompactDim[0]}px;height:${d.flexCompactDim[1]}px;z-index:-1;position:absolute;background-color:red"></div>` : ''}
-     //                             ${state.layout == 'bottom' && state.compact && d.flexCompactDim && (d.flexCompactDim[0] || d.flexCompactDim[0] == 1) ? ` <div style="border:1px solid black;opacity:0.5;margin-top:${-d.flexCompactDim[1] + d.height}px;margin-left:${-(d.flexCompactDim[0] / 2 - d.width) / 2 + state.compactMarginPair(d) / 4}px;width:${d.flexCompactDim[0]}px;height:${d.flexCompactDim[1]}px;z-index:-1;position:absolute;background-color:red"></div>` : ''}
-     //                             ${state.layout == 'left' && state.compact && d.flexCompactDim && (d.flexCompactDim[0] || d.flexCompactDim[0] == 1) ? ` <div style="border:1px solid black;opacity:0.5;margin-top:${-(d.flexCompactDim[0]/2-d.height)/2+ state.compactMarginPair(d) / 4}px;margin-left:${0}px;width:${d.flexCompactDim[1]}px;height:${d.flexCompactDim[0]}px;z-index:-1;position:absolute;background-color:red"></div>` : ''}
-     //                             ${state.layout == 'right' && state.compact && d.flexCompactDim && (d.flexCompactDim[0] || d.flexCompactDim[0] == 1) ? ` <div style="border:1px solid black;opacity:0.5; margin-top:${-(d.flexCompactDim[0]/2-d.height)/2+ state.compactMarginPair(d) / 4}px;margin-left:${d.width-d.flexCompactDim[1]}px;width:${d.flexCompactDim[1]}px;height:${d.flexCompactDim[0]}px;z-index:-1;position:absolute;background-color:red"></div>` : ''}
-     //                         -->
-     //                              <img src="${d.data.imageUrl}"  style="border-radius:100px;width:60px;height:60px;" />
-     //                              ID: ${d.data.id} <br>
-     //                              Children Direct:${d.data._directSubordinates}<br>
-     //                              Children Total:${d.data._totalSubordinates}
-     //                             </div>
-     //                         `;
-     //                     })
+     .nodeContent(function (d, i, arr, state) {
+        const deptColor = departmentColors[d.data.department_name] || "#718096";
+        return `
+           <div style="padding:0px;border:1px solid #E4E2E9;border-radius:8px;background-color:white;overflow:hidden;">
+                <div style="background-color:${deptColor};padding:8px 10px;">
+                    <div style="font-weight:bold;color:white;font-size:14px;">
+                        ${d.data.first_name} ${d.data.last_name}
+                    </div>
+                </div>
+                <div style="padding:10px;">
+                    <div style="color:#716E7B;font-size:12px;">
+                        ${d.data.department_name}
+                    </div>
+                    <div style="color:#999;font-size:10px;margin-top:4px;">
+                        ID: ${d.data.id}
+                    </div>
+                </div>
+           </div>
+        `;
+    })
 
      .nodeHeight((d) => 85 + 25)
      .nodeWidth((d) => {
@@ -362,7 +502,9 @@
     );
 
     chart.render();
-   });
+
+    // Load data from Google Sheet when page loads
+    loadGoogleSheetData();
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
