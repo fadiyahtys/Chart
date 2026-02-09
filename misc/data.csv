@@ -1,77 +1,77 @@
-id,parentId,first_name,last_name,department_name,img_url
-100,,Simon,Burley,President Director,
-101,100,Zuraidah,Binti Mohd,Senior Project Control Manager,
-102,173,Agus,Supramono,Commercial,
-103,174,Ahnaf,Fairuz Ramadhan,Planning,
-104,173,Boby,Hendrawan Harahap,Commercial,
-105,175,Budi,Mulyanto,Procurement & Logistic,
-106,175,Dedi,Prayitno,Procurement & Logistic,
-107,174,Dimas,Sr Kuncoro,Planning,
-108,173,Donny,Isyanto,Commercial,
-109,173,Ellis,Trisnawati,Commercial,
-110,174,Ferdinand,Ariesta,Planning,
-111,174,Geoffrey,Timothy,Planning,
-112,173,Indra,Gunawan,Commercial,
-113,173,Jonathan,Julian,Commercial,
-114,173,Josh,Kevin Limanta,Commercial,
-115,173,Made,Dimas Agung Perwira,Commercial,
-116,175,Tatang,Mawardi,Procurement & Logistic,
-117,173,Wahju,Rachmat,Commercial,
-118,174,Yazid,Ubaidilah,Planning,
-119,175,Yohanes,Hermawan,Procurement & Logistic,
-120,174,Yudha,Adrianto,Planning,
-121,173,Yusaf,Tri Hartanto,Commercial,
-122,175,Yusuf,Supriyanto,Procurement & Logistic,
-123,105,Dinan,Mardiana,Procurement & Logistic,
-124,105,Fadli,Fadli,Procurement & Logistic,
-125,105,Fuad,Amirul Huda,Procurement & Logistic,
-126,105,Harry,Setiyawan,Procurement & Logistic,
-127,105,M.,Erry Bayurahardja,Procurement & Logistic,
-128,105,Sidik,Kusuma Hendra,Procurement & Logistic,
-129,105,Sukendar,Sukendar,Procurement & Logistic,
-130,107,Eliana,Festica Tandilino',Planning,
-131,107,Fajar,Restu Illahi,Planning,
-132,108,Fany,Fil Addin,Commercial,
-133,109,Ramzy,Farhan Zakaria,Commercial,
-134,109,Riska,Sari Hardiyanti,Commercial,
-135,109,Robi,Herwindo,Commercial,
-136,110,Hana,Muzainah,Planning,
-137,110,Rivaldo,Kamal,Planning,
-138,112,Nurhana,Basri,Commercial,
-139,113,Ade,Maya Kartini,Commercial,
-140,113,Antonius,Manurung,Commercial,
-141,113,Fadiyah,Nur Ayuning Tyas,Commercial,
-142,113,Hanif,Fikri Maulana,Commercial,
-143,113,Latifa,Lithasari Mutmainah,Commercial,
-144,113,M.,Endrik Irwanto,Commercial,
-145,113,Melani,Chandra Puspita,Commercial,
-146,113,RA,Imareta Sulistiofanny,Commercial,
-147,113,Rifqi,Ichwan Kurnia,Commercial,
-148,113,Teguh,Sariyadi,Commercial,
-149,115,Aang,Mochammad Iqbal,Commercial,
-150,115,Dimas,Yuniandhika,Commercial,
-151,115,Emanuel,Atyanto Widhi Nugroho,Commercial,
-152,115,Muhammad,Rizky Elyano,Commercial,
-153,115,Onivia,Nur Fitri Ardiani,Commercial,
-154,117,Puspa,Zahra,Commercial,
-155,120,Buing,Eko Prasetiyo,Planning,
-156,120,Ishaq,Maulana Akbar,Planning,
-157,140,Agus,Sriyanto,Commercial,
-158,140,Aiman,Abdul Aziz,Commercial,
-159,140,Arifa,Dwi Nabila,Commercial,
-160,140,David,Permana,Commercial,
-161,140,Karima,Nafilah,Commercial,
-162,140,Muhammad,Agi Bahrul Faiz,Commercial,
-163,140,Riki,Supriadi,Commercial,
-164,140,Satrio,Wibowo,Commercial,
-165,140,Tatok,Ariestiyantono,Commercial,
-166,140,Yohanes,Surya,Commercial,
-167,140,Yudha,Randa,Commercial,
-168,140,Yulius,Hendra Kristanto,Commercial,
-169,150,Ade,Rizki,Commercial,
-170,150,Nur,Anisa Aprilyani,Commercial,
-171,150,Tubagus,Cipta Perdana Harta,Commercial,
-172,150,Wieke,Handjari,Commercial,
-173,101,Commercial,.,Zuraidah Binti Mohd,
-174,101,Planning,.,TBA,
-175,101,Procurement ,& Logistic,Asep Indra,
+id;parentId;first_name;last_name;department_name;position;location
+100;;Simon;Burley;;President Director;
+101;100;Zuraidah;Binti Mohd;;Senior Project Control Manager;
+102;173;Agus;Supramono;Commercial;Manager Commercial;LEI ID JA246 Tangguh
+103;174;Ahnaf;Fairuz Ramadhan;Planning;Engineer Civil Planning;LEI ID JA246 Tangguh
+104;173;Boby;Hendrawan Harahap;Commercial;Manager Commercial;LEI ID J02530 JKT05 T2 MS Data Center
+105;175;Budi;Mulyanto;Procurement & Logistic;Manager Logistics and Plant;LEI ID J02590 JGC
+106;175;Dedi;Prayitno;Procurement & Logistic;Supervisor Procurement;LEI ID JA246 Tangguh
+107;174;Dimas;Sri Kuncoro;Planning;Senior Engineer Civil Planning;LEI ID J02590 JGC
+108;173;Donny;Isyanto;Commercial;Senior Quantity Surveyor;LEI ID JA246 Tangguh
+109;173;Ellis;Trisnawati;Commercial;Manager Commercial;LEI ID JA006 Bekasi
+110;174;Ferdinand;Ariesta;Planning;Planning Manager;LEI ID J02530 JKT05 T2 MS Data Center
+111;174;Geoffrey;Timothy;Planning;Engineer Civil Planning;LEI ID JA210 Freeport
+112;173;Indra;Gunawan;Commercial;Superintendent Commercial;LEI ID JA248 Vale
+113;173;Jonathan;Julian;Commercial;Manager Commercial;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+114;173;Josh;Kevin Limanta;Commercial;Manager Commercial;LEI ID JA229 AU Embassy
+115;173;Made;Dimas Agung Perwira;Commercial;Manager Commercial;LEI ID JA246 Tangguh
+116;175;Tatang;Mawardi;Procurement & Logistic;Superintendent Logistics;LEI ID JA006 Bekasi
+117;173;Wahju;Rachmat;Commercial;Assistant Estimating Manager;LEI ID Head Office
+118;174;Yazid;Ubaidilah;Planning;Senior Engineer Civil Planning;LEI ID J02590 JGC
+119;175;Yohanes;Hermawan;Procurement & Logistic;Manager Procurement;LEI ID J02530 JKT05 T2 MS Data Center
+120;174;Yudha;Adrianto;Planning;Assistant Manager Planning;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+121;173;Yusaf;Tri Hartanto;Commercial;Senior Quantity Surveyor;LEI ID JA246 Tangguh
+122;175;Yusuf;Supriyanto;Procurement & Logistic;Supervisor Logistics;LEI ID JA210 Freeport
+123;105;Dinan;Mardiana;Procurement & Logistic;Supervisor Logistics;LEI ID JA246 Tangguh
+124;105;Fadli;Fadli;Procurement & Logistic;Supervisor Logistics;LEI ID J02590 JGC
+125;105;Fuad;Amirul Huda;Procurement & Logistic;Supervisor Logistic;LEI ID J02590 JGC
+126;105;Harry;Setiyawan;Procurement & Logistic;Supervisor Logistics;LEI ID JA246 Tangguh
+127;105;M.;Erry Bayurahardja;Procurement & Logistic;Supervisor Logistics;LEI ID J02590 JGC
+128;105;Sidik;Kusuma Hendra;Procurement & Logistic;Supervisor Logistics;LEI ID JA246 Tangguh
+129;105;Sukendar;Sukendar;Procurement & Logistic;Supervisor Logistics;LEI ID J02590 JGC
+130;107;Eliana;Festica Tandilino';Planning;Engineer Civil Planning;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+131;107;Fajar;Restu Illahi;Planning;Engineer Civil Planning;LEI ID JA246 Tangguh
+132;108;Fany;Fil Addin;Commercial;Quantity Surveyor;LEI ID JA246 Tangguh
+133;109;Robi;Herwindo;Commercial;Supervisor Procurement;LEI ID JA006 Bekasi
+134;109;Riska;Sari Hardiyanti;Commercial;Quantity Surveyor;LEI ID JA210 Freeport
+135;109;Ramzy;Farhan Zakaria;Commercial;Assistant Procurement;LEI ID JA006 Bekasi
+136;110;Hana;Muzainah;Planning;Engineer Civil Planning;LEI ID J02530 JKT05 T2 MS Data Center
+137;110;Rivaldo;Kamal;Planning;Engineer Civil Planning;LEI ID J02590 JGC
+138;112;Nurhana;Basri;Commercial;Supervisor Procurement;LEI ID JA248 Vale
+139;113;Yulius;Hendra Kristanto;Commercial;Quantity Surveyor;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+140;113;Antonius;Manurung;Commercial;Manager Section (Site);LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+141;113;Teguh;Sariyadi;Commercial;Quantity Surveyor;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+142;113;RA;Imareta Sulistiofanny;Commercial;Quantity Surveyor;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+143;113;Latifa;Lithasari Mutmainah;Commercial;Superintendent Commercial;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+144;113;M.;Endrik Irwanto;Commercial;Senior Quantity Surveyor;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+145;113;Melani;Chandra Puspita;Commercial;Quantity Surveyor;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+146;113;Hanif;Fikri Maulana;Commercial;Assistant Procurement;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+147;113;Rifqi;Ichwan Kurnia;Commercial;Assistant Procurement;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+148;113;Ade;Maya Kartini;Commercial;Data Analyst;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+149;115;Aang;Mochammad Iqbal;Commercial;Senior Quantity Surveyor;LEI ID J02590 JGC
+150;115;Dimas;Yuniandhika;Commercial;Superintendent Procurement;LEI ID JA246 Tangguh
+151;115;Emanuel;Atyanto Widhi Nugroho;Commercial;Senior Estimator;LEI ID JA248 Vale
+152;115;Muhammad;Rizky Elyano;Commercial;Quantity Surveyor;LEI ID J02590 JGC
+153;115;Onivia;Nur Fitri Ardiani;Commercial;Quantity Surveyor;LEI ID J02590 JGC
+154;117;Puspa;Zahra;Commercial;Quantity Surveyor;LEI ID JA246 Tangguh
+155;120;Buing;Eko Prasetiyo;Planning;Senior Engineer Civil Planning;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+156;120;Ishaq;Maulana Akbar;Planning;Engineer Civil Planning;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+157;140;Agus;Sriyanto;Commercial;Supervisor Logistics (Material Control);LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+158;140;Aiman;Abdul Aziz;Commercial;Officer Logistic;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+159;140;Arifa;Dwi Nabila;Commercial;Supervisor Logistics;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+160;140;David;Permana;Commercial;Superintendent Logistics;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+161;140;Karima;Nafilah;Commercial;Officer Procurement;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+162;140;Muhammad;Agi Bahrul Faiz;Commercial;Procurement Engineer;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+163;140;Riki;Supriadi;Commercial;Supervisor Procurement;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+164;140;Satrio;Wibowo;Commercial;Superintendent Procurement;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+165;140;Tatok;Ariestiyantono;Commercial;Officer Logistics;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+166;140;Yohanes;Surya;Commercial;Procurement Engineer;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+167;140;Yudha;Randa;Commercial;Officer Procurement;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+168;113;Fadiyah;Nur Ayuning Tyas;Commercial;Data Analyst;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+169;150;Ade;Rizki;Commercial;Supervisor Procurement;LEI ID JA246 Tangguh
+170;150;Nur;Anisa Aprilyani;Commercial;Assistant Procurement;LEI ID J02590 JGC
+171;150;Tubagus;Cipta Perdana Harta;Commercial;Supervisor Procurement;LEI ID JA246 Tangguh
+172;150;Wieke;Handjari;Commercial;Officer Procurement;LEI ID JA246 Tangguh
+173;101;Commercial;;;Zuraidah Binti Mohd;
+174;101;Planning;;;TBA;
+175;101;Procurement;& Logistic;;Asep Indra;
