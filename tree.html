@@ -218,7 +218,9 @@
     "Commercial": "#F18F01",
     "Planning": "#C73E1D",
     "Procurement_and_Logistic": "#6A994E",
-    "Procurement and Logistic": "#6A994E"
+    "Procurement and Logistic": "#6A994E",
+    "Procurement & Logistic": "#6A994E",
+    "Procurement & Logistics": "#6A994E"
    };
    
    // Load data from Google Sheet - Multiple approaches
@@ -228,18 +230,29 @@
    let isRefreshingGoogleSheet = false;
    const googleSheetAutoRefreshMs = 5 * 60 * 1000;
 
+   function normalizeDeptKey(value) {
+     if (!value) return '';
+     const v = String(value).trim();
+     if (!v) return '';
+     return v;
+   }
+
    function sortDataForDisplay(data) {
      const orderForParent101 = {
        Commercial: 1,
        Procurement_and_Logistic: 2,
+       'Procurement & Logistic': 2,
+       'Procurement & Logistics': 2,
        Planning: 3
      };
 
      return [...data].sort((a, b) => {
        if (a.parentId !== b.parentId) return 0;
        if (a.parentId === '101') {
-         const ao = orderForParent101[a.first_name] ?? 999;
-         const bo = orderForParent101[b.first_name] ?? 999;
+         const aKey = normalizeDeptKey(a.first_name);
+         const bKey = normalizeDeptKey(b.first_name);
+         const ao = orderForParent101[aKey] ?? 999;
+         const bo = orderForParent101[bKey] ?? 999;
          if (ao !== bo) return ao - bo;
        }
        return 0;
