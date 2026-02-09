@@ -1,27 +1,27 @@
 id;parentId;first_name;last_name;department_name;position;location
-100;;Simon;Burley;;President Director;
-101;100;Zuraidah;Binti Mohd;;Senior Project Control Manager;
+100;;Simon;Burley;President Director;President Director;
+101;100;Zuraidah;Binti Mohd;Senior Project Control Manager;Senior Project Control Manager;
 102;173;Agus;Supramono;Commercial;Manager Commercial;LEI ID JA246 Tangguh
-103;174;Ahnaf;Fairuz Ramadhan;Planning;Engineer Civil Planning;LEI ID JA246 Tangguh
+103;175;Ahnaf;Fairuz Ramadhan;Planning;Engineer Civil Planning;LEI ID JA246 Tangguh
 104;173;Boby;Hendrawan Harahap;Commercial;Manager Commercial;LEI ID J02530 JKT05 T2 MS Data Center
-105;175;Budi;Mulyanto;Procurement & Logistic;Manager Logistics and Plant;LEI ID J02590 JGC
-106;175;Dedi;Prayitno;Procurement & Logistic;Supervisor Procurement;LEI ID JA246 Tangguh
-107;174;Dimas;Sri Kuncoro;Planning;Senior Engineer Civil Planning;LEI ID J02590 JGC
+107;175;Dimas;Sri Kuncoro;Planning;Senior Engineer Civil Planning;LEI ID J02590 JGC
+110;175;Ferdinand;Ariesta;Planning;Planning Manager;LEI ID J02530 JKT05 T2 MS Data Center
+111;175;Geoffrey;Timothy;Planning;Engineer Civil Planning;LEI ID JA210 Freeport
 108;173;Donny;Isyanto;Commercial;Senior Quantity Surveyor;LEI ID JA246 Tangguh
 109;173;Ellis;Trisnawati;Commercial;Manager Commercial;LEI ID JA006 Bekasi
-110;174;Ferdinand;Ariesta;Planning;Planning Manager;LEI ID J02530 JKT05 T2 MS Data Center
-111;174;Geoffrey;Timothy;Planning;Engineer Civil Planning;LEI ID JA210 Freeport
+118;175;Yazid;Ubaidilah;Planning;Senior Engineer Civil Planning;LEI ID J02590 JGC
+120;175;Yudha;Adrianto;Planning;Assistant Manager Planning;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
 112;173;Indra;Gunawan;Commercial;Superintendent Commercial;LEI ID JA248 Vale
 113;173;Jonathan;Julian;Commercial;Manager Commercial;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
 114;173;Josh;Kevin Limanta;Commercial;Manager Commercial;LEI ID JA229 AU Embassy
 115;173;Made;Dimas Agung Perwira;Commercial;Manager Commercial;LEI ID JA246 Tangguh
-116;175;Tatang;Mawardi;Procurement & Logistic;Superintendent Logistics;LEI ID JA006 Bekasi
+105;174;Budi;Mulyanto;Procurement & Logistic;Manager Logistics and Plant;LEI ID J02590 JGC
 117;173;Wahju;Rachmat;Commercial;Assistant Estimating Manager;LEI ID Head Office
-118;174;Yazid;Ubaidilah;Planning;Senior Engineer Civil Planning;LEI ID J02590 JGC
-119;175;Yohanes;Hermawan;Procurement & Logistic;Manager Procurement;LEI ID J02530 JKT05 T2 MS Data Center
-120;174;Yudha;Adrianto;Planning;Assistant Manager Planning;LEI ID J02560 Vale – EPC Mine Infrastructure Facility and Ut
+106;174;Dedi;Prayitno;Procurement & Logistic;Supervisor Procurement;LEI ID JA246 Tangguh
+116;174;Tatang;Mawardi;Procurement & Logistic;Superintendent Logistics;LEI ID JA006 Bekasi
+119;174;Yohanes;Hermawan;Procurement & Logistic;Manager Procurement;LEI ID J02530 JKT05 T2 MS Data Center
 121;173;Yusaf;Tri Hartanto;Commercial;Senior Quantity Surveyor;LEI ID JA246 Tangguh
-122;175;Yusuf;Supriyanto;Procurement & Logistic;Supervisor Logistics;LEI ID JA210 Freeport
+122;174;Yusuf;Supriyanto;Procurement & Logistic;Supervisor Logistics;LEI ID JA210 Freeport
 123;105;Dinan;Mardiana;Procurement & Logistic;Supervisor Logistics;LEI ID JA246 Tangguh
 124;105;Fadli;Fadli;Procurement & Logistic;Supervisor Logistics;LEI ID J02590 JGC
 125;105;Fuad;Amirul Huda;Procurement & Logistic;Supervisor Logistic;LEI ID J02590 JGC
@@ -73,5 +73,5 @@ id;parentId;first_name;last_name;department_name;position;location
 171;150;Tubagus;Cipta Perdana Harta;Commercial;Supervisor Procurement;LEI ID JA246 Tangguh
 172;150;Wieke;Handjari;Commercial;Officer Procurement;LEI ID JA246 Tangguh
 173;101;Commercial;;;Zuraidah Binti Mohd;
-174;101;Planning;;;TBA;
-175;101;Procurement;& Logistic;;Asep Indra;
+174;101;Procurement;& Logistic;;Asep Indra;
+175;101;Planning;;;TBA;
